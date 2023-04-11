@@ -76,13 +76,12 @@ function PatientMovementTracker(props) {
             return (
               <Grid
                 item
+                key={index}
                 xs={1.11}
                 sx={{ display: { xs: "none", lg: "block" } }}
               >
                 <Box className={containerClasses}>
-                  <Typography key={index} sx={styles.subHeading}>
-                    {data.title}
-                  </Typography>
+                  <Typography sx={styles.subHeading}>{data.title}</Typography>
                 </Box>
               </Grid>
             );
@@ -131,7 +130,7 @@ function PatientMovementTracker(props) {
                 {
                   data.patientdatials.map((data, index) => {
                     return (
-                      <React.Fragment>
+                      <React.Fragment key={index}>
                         <Grid
                           xs={6}
                           md={2}
@@ -144,7 +143,7 @@ function PatientMovementTracker(props) {
                             {data.label}
                           </Typography>
                         </Grid>
-                        <Grid item xs={6} md={2} lg={1.11} key={index}>
+                        <Grid item xs={6} md={2} lg={1.11}>
                           <Box className={styless.greenbg} sx={{ height: 100 }}>
                             <Pat color="#f61313" />
                           </Box>
