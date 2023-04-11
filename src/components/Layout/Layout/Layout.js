@@ -1,15 +1,15 @@
 import React from "react";
 import NavBar from "../NavBar/NavBar";
 import SideBar from "../SideBar/SideBar";
-import { Box} from "@mui/material";
+import { Box } from "@mui/material";
 
 function Layout({ children }) {
   return (
-    <Box sx={{display:"flex", height: "100vh" }}>
+    <Box sx={{ display: "flex", height: "100vh" }}>
       <Box>
-        <SideBar/>
+        <SideBar />
       </Box>
-      <Box sx={{flex:1}}>
+      <Box sx={{ flex: 1, marginLeft: 6 }}>
         <NavBar />
         {children}
       </Box>

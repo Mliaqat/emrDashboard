@@ -7,7 +7,14 @@ import { BellIcon, Emr, MenueIcon } from "../../../../public/Icon/icon";
 
 function SideBar() {
   return (
-    <Box sx={{ width: 60, height: "100%", background: "#191F4F" }}>
+    <Box
+      sx={{
+        width: 60,
+        height: "100%",
+        background: "#191F4F",
+        position: "fixed",
+      }}
+    >
       <Box
         sx={{ display: "flex", justifyContent: "center", rowGap: 2, py: 2.5 }}
       >
@@ -68,12 +75,7 @@ function SideBar() {
 
       <Box className={styles.menue3}>
         <Link href="/">
-          <Image
-            src="images/dot.svg"
-            height={30}
-            width={30}
-            alt="logo"
-          />
+          <Image src="images/dot.svg" height={30} width={30} alt="logo" />
         </Link>
       </Box>
     </Box>

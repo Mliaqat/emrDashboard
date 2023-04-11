@@ -14,13 +14,15 @@ function PatientDetails(props) {
         <>
           <Grid item xs={12} sm={6} md={4} lg={2.5}>
             <SecondaryCards title="Pending" subTitle="Upcoming (2)">
-              {ProfileData.map((data, index) => {
-                return (
-                  <Box my={2} key={index}>
-                    <ProfileCard title={data?.title} status={data?.status} />
-                  </Box>
-                );
-              })}
+              <Box>
+                {ProfileData.map((data, index) => {
+                  return (
+                    <Box my={2} key={index}>
+                      <ProfileCard title={data?.title} status={data?.status} />
+                    </Box>
+                  );
+                })}
+              </Box>
             </SecondaryCards>
           </Grid>
           <Grid item xs={12} sm={6} md={4} lg={2.5}>
@@ -45,6 +47,7 @@ function PatientDetails(props) {
               })}
             </SecondaryCards>
           </Grid>
+
           <Grid item xs={12} lg={4.5}>
             <SecondaryCards
               title="Cross Consultation Request"
