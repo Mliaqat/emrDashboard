@@ -53,25 +53,13 @@ function PatientDetails(props) {
             >
               <Grid container sx={{ textAlign: "center" }} my={1}>
                 <Grid Item xs={4}>
-                  <Typography
-                    sx={{ fontSize: 12, color: "#003C83", fontWeight: 600 }}
-                  >
-                    Patient details
-                  </Typography>
+                  <Typography sx={styles.title}>Patient details</Typography>
                 </Grid>
                 <Grid Item xs={4}>
-                  <Typography
-                    sx={{ fontSize: 12, color: "#003C83", fontWeight: 600 }}
-                  >
-                    Consultant details
-                  </Typography>
+                  <Typography sx={styles.title}>Consultant details</Typography>
                 </Grid>
                 <Grid Item xs={4}>
-                  <Typography
-                    sx={{ fontSize: 12, color: "#003C83", fontWeight: 600 }}
-                  >
-                    Action
-                  </Typography>
+                  <Typography sx={styles.title}>Action</Typography>
                 </Grid>
               </Grid>
               <DoctorProfile />
@@ -84,25 +72,13 @@ function PatientDetails(props) {
             >
               <Grid container sx={{ textAlign: "center" }} my={1}>
                 <Grid Item xs={4}>
-                  <Typography
-                    sx={{ fontSize: 12, color: "#003C83", fontWeight: 600 }}
-                  >
-                    Patient details
-                  </Typography>
+                  <Typography sx={styles.title}>Patient details</Typography>
                 </Grid>
                 <Grid Item xs={4}>
-                  <Typography
-                    sx={{ fontSize: 12, color: "#003C83", fontWeight: 600 }}
-                  >
-                    Consultant details
-                  </Typography>
+                  <Typography sx={styles.title}>Consultant details</Typography>
                 </Grid>
                 <Grid Item xs={4}>
-                  <Typography
-                    sx={{ fontSize: 12, color: "#003C83", fontWeight: 600 }}
-                  >
-                    Action
-                  </Typography>
+                  <Typography sx={styles.title}>Action</Typography>
                 </Grid>
               </Grid>
               <DoctorProfile />
@@ -116,3 +92,7 @@ function PatientDetails(props) {
 }
 
 export default PatientDetails;
+
+const styles = {
+  title: { fontSize: 12, color: "#003C83", fontWeight: 600 },
+};
