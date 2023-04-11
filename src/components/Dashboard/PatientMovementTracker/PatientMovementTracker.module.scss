@@ -1,4 +1,12 @@
-.green {
+.IconBox{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1rem solid #ffffff;
+}
+
+.greenbg {
+  @extend .IconBox;
   background: linear-gradient(
     90deg,
     rgba(87, 238, 83, 0.35) 0%,
@@ -7,7 +15,8 @@
   border: 0.5px solid #bde6d5;
 }
 
-.red {
+.redbg{
+  @extend .IconBox;
   background: linear-gradient(
     90deg,
     rgba(255, 11, 11, 0.35) 0%,
@@ -16,7 +25,8 @@
   border: 0.5px solid #bde6d5;
 }
 
-.lightYellow {
+.lightYellowbg {
+  @extend .IconBox;
   background: linear-gradient(
     90deg,
     rgba(255, 192, 30, 0.35) 0%,
@@ -36,3 +46,53 @@
 .redcolor {
   color: #f61313;
 }
+
+
+.gridlayout{
+  display: grid;
+  grid-template-columns: repeat(10,1fr);
+}
+.subgridlayout{
+  display: grid;
+  grid-template-columns: repeat(10,1fr);
+  column-gap: 1px;
+  row-gap: 1rem;
+}
+
+.titlebg{
+  background: #B2D1FF;
+  padding: 1rem;
+  text-align: center;
+  font-size: 12;
+  font-weight: 600;
+  white-space: nowrap;
+  position: relative;
+}
+
+.beforeBorder{
+  position: absolute;
+  content: "  ";
+  height: 70%;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  border-radius: 0px 6px 6px 0px; 
+}
+
+.greenBorder::before {
+  @extend .beforeBorder;
+  border: 3px solid #009456;
+}
+
+.yellowBorder::before{
+  @extend .beforeBorder;
+  border: 3px solid #f1ae00; 
+}
+
+.redBorder::before{
+  @extend .beforeBorder;
+  border: 3px solid #f61313; 
+}
+
+
+
