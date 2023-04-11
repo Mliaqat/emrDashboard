@@ -1,0 +1,42 @@
+.menue1 {
+  background-color: red;
+  position: relative;
+  margin-left: 7px;
+  margin-bottom: 1.5rem;
+  padding: 8px 10px;
+  background: #ffffff;
+  box-shadow: inset -1px -1px 6px rgba(0, 0, 0, 0.25),
+    inset 1px 1px 6px rgba(0, 0, 0, 0.25);
+  border-radius: 15px 0px 0px 15px;
+}
+
+.menue::after {
+  position: absolute;
+  content: "  ";
+  height: 95%;
+  right: 0;
+  border: 4px solid #e9e9e9;
+  border-radius: 6px 0px 0px 6px;
+  top: -3px;
+}
+
+.icon {
+  width: 2rem;
+  > svg {
+    fill: #191f4f;
+  }
+}
+
+.menue3 {
+  position: relative;
+  margin-left: 7px;
+  margin-bottom: 1.5rem;
+  padding: 8px 10px;
+}
+
+.icon1 {
+  width: 2rem;
+  > svg {
+    fill: #ffffff;
+  }
+}
