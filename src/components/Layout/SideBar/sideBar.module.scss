@@ -1,4 +1,4 @@
-.menue1 {
+.active {
   background-color: red;
   position: relative;
   margin-left: 7px;
@@ -27,11 +27,16 @@
   }
 }
 
-.menue3 {
+.inactive {
   position: relative;
   margin-left: 7px;
   margin-bottom: 1.5rem;
   padding: 8px 10px;
+  transition: transform 0.2s;
+}
+
+.inactive:hover {
+  transform: scale(1.2);
 }
 
 .icon1 {

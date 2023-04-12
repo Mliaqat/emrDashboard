@@ -15,7 +15,7 @@ function Dashboard() {
       <Grid
         container
         spacing={2}
-        mt={2}
+        mt={1}
         px={2}
         sx={{ justifyContent: { xs: "center", md: "" } }}
       >
@@ -40,8 +40,6 @@ function Dashboard() {
           setMenue={setpatientMovement}
         />
         <PatientMovementTracker patientMovement={patientMovement} />
-
-
       </Grid>
     </Layout>
   );

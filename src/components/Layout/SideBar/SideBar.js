@@ -21,7 +21,7 @@ function SideBar() {
         <Image src="images/logo.svg" height={25} width={25} alt="logo" />
       </Box>
 
-      <Box className={styles.menue3}>
+      <Box className={styles.inactive}>
         <Link href="/">
           <span className={styles.icon1}>
             <MenueIcon />
@@ -29,7 +29,7 @@ function SideBar() {
         </Link>
       </Box>
 
-      <Box className={styles.menue3}>
+      <Box className={styles.inactive}>
         <Link href="/">
           <span className={styles.icon1}>
             <BellIcon />
@@ -37,7 +37,7 @@ function SideBar() {
         </Link>
       </Box>
 
-      <Box className={styles.menue1}>
+      <Box className={styles.active}>
         <Link href="/" className={styles.menue}>
           <span className={styles.icon}>
             <Emr />
@@ -45,13 +45,13 @@ function SideBar() {
         </Link>
       </Box>
 
-      <Box className={styles.menue3}>
+      <Box className={styles.inactive}>
         <Link href="/">
           <Image src="images/editbook.svg" height={30} width={30} alt="logo" />
         </Link>
       </Box>
 
-      <Box className={styles.menue3}>
+      <Box className={styles.inactive}>
         <Link href="/">
           <Image
             src="images/contactbook.svg"
@@ -62,7 +62,7 @@ function SideBar() {
         </Link>
       </Box>
 
-      <Box className={styles.menue3}>
+      <Box className={styles.inactive}>
         <Link href="/">
           <Image
             src="images/checklistbook.svg"
@@ -73,7 +73,7 @@ function SideBar() {
         </Link>
       </Box>
 
-      <Box className={styles.menue3}>
+      <Box className={styles.inactive}>
         <Link href="/">
           <Image src="images/dot.svg" height={30} width={30} alt="logo" />
         </Link>

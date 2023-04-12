@@ -28,7 +28,9 @@ function PatientDetails(props) {
           </Grid>
           <Grid item xs={12} sm={6} md={4} lg={2.5}>
             <SecondaryCards title="In Progress" subTitle="ConsultationRoom 1">
-              <Box sx={{ height: 485 ,overflowY:"scroll"}}>
+              <Box
+                sx={{ height: 485, overflowY: "scroll", overflowX: "hidden" }}
+              >
                 {ConsultationRoomdata.map((data, index) => {
                   return (
                     <Box my={2} key={index}>

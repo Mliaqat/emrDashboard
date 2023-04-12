@@ -32,7 +32,7 @@ function PatientMovementTracker(props) {
           {/* -----------------------Filter---------------------------------- */}
 
           <Grid item xs={12} mb={2}>
-            <Paper elevation={2}>
+            <Paper elevation={3}>
               <Box sx={styles.filter}>
                 <SearchField />
 
@@ -94,7 +94,6 @@ function PatientMovementTracker(props) {
           {/* ---------------------------------Patient Card------------------------------------- */}
 
           <PatientMovement />
-
         </Grid>
       )}
     </>
@@ -120,14 +119,14 @@ const styles = {
   },
   mainHeading: {
     p: 1.5,
-    color: "#191F4F",
+    color: "#003C83",
     fontWeight: 800,
     fontSize: { xs: 12, md: 22 },
     backgroundColor: "rgba(161, 210, 255, 0.4)",
     textAlign: "center",
   },
   subHeading: {
-    overflow: { xs: "hidden", lg: "visible" },
+    overflow: { xs: "hidden", xl: "visible" },
     textOverflow: "ellipsis",
     fontSize: 14,
     color: "#003C83",

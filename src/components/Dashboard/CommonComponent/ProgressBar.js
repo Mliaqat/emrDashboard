@@ -15,7 +15,7 @@ function ProgressBar({ progress, title }) {
     } else {
       setColor("#87CC85");
     }
-  });
+  }, [progress]);
 
   return (
     //JSX
