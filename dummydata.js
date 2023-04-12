@@ -78,6 +78,27 @@ export const ProfileData = [
   },
 ];
 
+export const ConsultationRoomdata = [
+  {
+    title: "Jerome Bell",
+    status: "Procedure",
+    roomno: "Exam Room in # 1"
+  },
+  {
+    title: "Kristin Watson",
+    status: "Followup",
+    roomno: "Exam Room in # 2"
+  },
+  {
+    room: "Exam Room #2 Available",
+  },
+  {
+    room: "Exam Room #3 Available",
+  },
+  {
+    room:"Exam Room #4 Available"
+  },
+];
 
 export const PatienArray = [
   {
@@ -133,7 +154,7 @@ export const PatienArray = [
         ConsultationRoom: true,
         label: "Consultation Room",
         bgcolor: "lightYellowbg",
-        icon:"tick"
+        icon: "tick",
       },
       {
         ConsultationRoom: true,

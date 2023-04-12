@@ -2,7 +2,7 @@ import { Box, Paper, Tooltip, Typography } from "@mui/material";
 import Image from "next/image";
 import React from "react";
 
-function ProfileCard({ title, status }) {
+function ProfileCard({ title, status,roomno }) {
   return (
     <Paper
       elevation={3}
@@ -96,7 +96,7 @@ function ProfileCard({ title, status }) {
                 <Typography sx={{ fontSize: 10 }}>{status}</Typography>
               </Box>
               <Typography sx={{ fontSize: 10, whiteSpace: "nowrap" }}>
-                2:OO PM
+               {roomno ? roomno : "2:OO PM"} 
               </Typography>
             </Box>
 

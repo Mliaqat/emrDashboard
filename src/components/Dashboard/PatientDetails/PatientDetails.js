@@ -2,8 +2,9 @@ import React from "react";
 import DoctorProfile from "../CommonComponent/DoctorProfile";
 import { Box, Grid, Typography } from "@mui/material";
 import SecondaryCards from "../CommonComponent/SecondaryCards";
-import { ProfileData } from "../../../../dummydata";
+import { ConsultationRoomdata, ProfileData } from "../../../../dummydata";
 import ProfileCard from "../CommonComponent/ProfileCard";
+import ConsultationRoom from "../CommonComponent/ConsultationRoom";
 
 function PatientDetails(props) {
   const { menue } = props;
@@ -14,7 +15,7 @@ function PatientDetails(props) {
         <>
           <Grid item xs={12} sm={6} md={4} lg={2.5}>
             <SecondaryCards title="Pending" subTitle="Upcoming (2)">
-              <Box>
+              <Box sx={{ height: 470 }}>
                 {ProfileData.map((data, index) => {
                   return (
                     <Box my={2} key={index}>
@@ -27,24 +28,36 @@ function PatientDetails(props) {
           </Grid>
           <Grid item xs={12} sm={6} md={4} lg={2.5}>
             <SecondaryCards title="In Progress" subTitle="ConsultationRoom 1">
-              {ProfileData.map((data, index) => {
-                return (
-                  <Box my={2} key={index}>
-                    <ProfileCard title={data?.title} status={data?.status} />
-                  </Box>
-                );
-              })}
+              <Box sx={{ height: 485 ,overflowY:"scroll"}}>
+                {ConsultationRoomdata.map((data, index) => {
+                  return (
+                    <Box my={2} key={index}>
+                      {data?.room ? (
+                        <ConsultationRoom room={data?.room} />
+                      ) : (
+                        <ProfileCard
+                          title={data?.title}
+                          status={data?.status}
+                          roomno={data?.roomno}
+                        />
+                      )}
+                    </Box>
+                  );
+                })}
+              </Box>
             </SecondaryCards>
           </Grid>
           <Grid item xs={12} sm={6} md={4} lg={2.5}>
             <SecondaryCards title="Completed" subTitle="Checked Out (1)">
-              {ProfileData.map((data, index) => {
-                return (
-                  <Box my={2} key={index}>
-                    <ProfileCard title={data?.title} status={data?.status} />
-                  </Box>
-                );
-              })}
+              <Box sx={{ height: 470 }}>
+                {ProfileData.map((data, index) => {
+                  return (
+                    <Box my={2} key={index}>
+                      <ProfileCard title={data?.title} status={data?.status} />
+                    </Box>
+                  );
+                })}
+              </Box>
             </SecondaryCards>
           </Grid>
 
