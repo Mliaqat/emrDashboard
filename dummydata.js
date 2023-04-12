@@ -77,3 +77,94 @@ export const ProfileData = [
     status: "Procedure",
   },
 ];
+
+
+export const PatienArray = [
+  {
+    patientName: "Leslie Alexander",
+    label: "Patient Details",
+    patientdatials: [
+      { PreAssesment: true, label: "Pre-Assesment", bgcolor: "lightYellowbg" },
+      { Waitingarea: true, label: "Waiting Area", bgcolor: "lightYellowbg" },
+      {
+        ConsultationRoom: true,
+        label: "Consultation Room",
+        bgcolor: "lightYellowbg",
+      },
+      {
+        ConsultationRoom: true,
+        label: "Patient Details",
+        bgcolor: "lightYellowbg",
+      },
+      {
+        ConsultationRoom: true,
+        label: "Patient Details",
+        bgcolor: "redbg",
+      },
+      {
+        ConsultationRoom: true,
+        label: "Patient Details",
+        bgcolor: "lightYellowbg",
+      },
+      {
+        ConsultationRoom: true,
+        label: "Patient Details",
+        bgcolor: "IconBox",
+      },
+      {
+        ConsultationRoom: true,
+        label: "Patient Details",
+        bgcolor: "greenbg",
+      },
+      {
+        ConsultationRoom: true,
+        label: "Patient Details",
+        bgcolor: "IconBox",
+      },
+    ],
+  },
+  {
+    patientName: "Leslie Alexander",
+    label: "Patient Details",
+    patientdatials: [
+      { PreAssesment: true, label: "Pre-Assesment", bgcolor: "lightYellowbg" },
+      { Waitingarea: true, label: "Waiting Area", bgcolor: "lightYellowbg" },
+      {
+        ConsultationRoom: true,
+        label: "Consultation Room",
+        bgcolor: "lightYellowbg",
+        icon:"tick"
+      },
+      {
+        ConsultationRoom: true,
+        label: "Patient Details",
+        bgcolor: "lightYellowbg",
+      },
+      {
+        ConsultationRoom: true,
+        label: "Patient Details",
+        bgcolor: "IconBox",
+      },
+      {
+        ConsultationRoom: true,
+        label: "Patient Details",
+        bgcolor: "redbg",
+      },
+      {
+        ConsultationRoom: true,
+        label: "Patient Details",
+        bgcolor: "IconBox",
+      },
+      {
+        ConsultationRoom: true,
+        label: "Patient Details",
+        bgcolor: "greenbg",
+      },
+      {
+        ConsultationRoom: true,
+        label: "Patient Details",
+        bgcolor: "lightYellowbg",
+      },
+    ],
+  },
+];

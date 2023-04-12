@@ -1,8 +1,9 @@
-import { Box, Grid, Typography } from "@mui/material";
+import { Box, Grid, Paper, Typography } from "@mui/material";
 import Image from "next/image";
 import React from "react";
 import styless from "./PatientMovementTracker.module.scss";
-import { Pat, TickIcon } from "../../../../public/Icon/icon";
+import SearchField from "@/Ui/SearchField/SearchField";
+import PatientMovement from "../CommonComponent/PatientMovement";
 
 const titleArray = [
   { title: "Pre-Assesment", borderLine: "greenBorder" },
@@ -14,24 +15,6 @@ const titleArray = [
   { title: "Service Area-3", borderLine: "redBorder" },
   { title: "Followup bay", borderLine: "redBorder" },
   { title: "Prescription", borderLine: "redBorder" },
-];
-
-const PatienArray = [
-  {
-    patientName: "Leslie Alexander",
-    label: "Patient Details",
-    patientdatials: [
-      { PreAssesment: true, label: "Pre-Assesment" },
-      { Waitingarea: true, label: "Waiting Area" },
-      { ConsultationRoom: true, label: "Consultation Room" },
-      { ConsultationRoom: true, label: "Patient Details" },
-      { ConsultationRoom: true, label: "Patient Details" },
-      { ConsultationRoom: true, label: "Patient Details" },
-      { ConsultationRoom: true, label: "Patient Details" },
-      { ConsultationRoom: true, label: "Patient Details" },
-      { ConsultationRoom: true, label: "Patient Details" },
-    ],
-  },
 ];
 
 function PatientMovementTracker(props) {
@@ -46,6 +29,25 @@ function PatientMovementTracker(props) {
           paddingRight={0}
           justifyContent={"center"}
         >
+          {/* -----------------------Filter---------------------------------- */}
+
+          <Grid item xs={12} mb={2}>
+            <Paper elevation={2}>
+              <Box sx={styles.filter}>
+                <SearchField />
+
+                <Image
+                  src="images/search.svg"
+                  width={15}
+                  height={15}
+                  alt="search"
+                />
+              </Box>
+            </Paper>
+          </Grid>
+
+          {/* ---------------------Primary-Header-------------------------- */}
+
           <Grid item xs={4} sx={styles.mainHeading}>
             Consultation
           </Grid>
@@ -63,6 +65,8 @@ function PatientMovementTracker(props) {
           <Grid item xs={4} sx={styles.mainHeading}>
             Post Consultation
           </Grid>
+
+          {/* -------------------------Secondary-Header----------------------------- */}
 
           <Grid item xs={2} sx={{ display: { xs: "none", lg: "block" } }}>
             <Box className={styless.titlebg}>
@@ -87,81 +91,10 @@ function PatientMovementTracker(props) {
             );
           })}
 
-          {PatienArray.map((data, index) => {
-            return (
-              <React.Fragment key={index}>
-                <Grid
-                  xs={6}
-                  sm={0}
-                  sx={{
-                    display: { xs: "block", lg: "none" },
-                    mt: { xs: 2, lg: 0 },
-                  }}
-                >
-                  <Typography className={styless.titlebg} sx={{ height: 100 }}>
-                    {data.label}
-                  </Typography>
-                </Grid>
+          {/* ---------------------------------Patient Card------------------------------------- */}
 
-                <Grid item xs={6} lg={2} sx={{ mt: { xs: 2, lg: 0 } }}>
-                  <Box
-                    p={2}
-                    sx={{
-                      border: "0.5px solid #BDE6D5",
-                      height: 100,
-                    }}
-                  >
-                    <Typography sx={styles.mainTitle}>
-                      Leslie Alexander
-                    </Typography>
-                    <Typography sx={styles.subTitle}>MRN: AB12345</Typography>
-                    <Typography sx={styles.subTitle}>
-                      <Image
-                        src="images/age.svg"
-                        width={10}
-                        height={10}
-                        alt="age"
-                      />{" "}
-                      34Y
-                    </Typography>
-                  </Box>
-                </Grid>
+          <PatientMovement />
 
-                {
-                  data.patientdatials.map((data, index) => {
-                    return (
-                      <React.Fragment key={index}>
-                        <Grid
-                          xs={6}
-                          md={2}
-                          sx={{ display: { xs: "block", lg: "none" } }}
-                        >
-                          <Typography
-                            className={styless.titlebg}
-                            sx={{ height: 100 }}
-                          >
-                            {data.label}
-                          </Typography>
-                        </Grid>
-                        <Grid item xs={6} md={2} lg={1.11}>
-                          <Box className={styless.greenbg} sx={{ height: 100 }}>
-                            <Pat color="#f61313" />
-                          </Box>
-                        </Grid>
-                      </React.Fragment>
-                    );
-                  })
-
-                  // <Box className={styless.redbg}>
-                  //   <Pat color="#f1ae00" />
-                  // </Box>
-                  // <Box className={styless.lightYellowbg}>
-                  //   <TickIcon />
-                  // </Box>
-                }
-              </React.Fragment>
-            );
-          })}
         </Grid>
       )}
     </>
@@ -173,6 +106,13 @@ export default PatientMovementTracker;
 // -------------------------Styles---------------------------------
 
 const styles = {
+  filter: {
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+    px: 2,
+    py: 1,
+  },
   mainContainer: {
     width: { xs: "60vw", sm: "70vw", md: "100%", lg: "100%" },
     overflow: "auto",
@@ -187,7 +127,7 @@ const styles = {
     textAlign: "center",
   },
   subHeading: {
-    overflow: "hidden",
+    overflow: { xs: "hidden", lg: "visible" },
     textOverflow: "ellipsis",
     fontSize: 14,
     color: "#003C83",
@@ -199,4 +139,8 @@ const styles = {
   },
   mainTitle: { fontSize: 18, color: "#003C83", fontWeight: 600 },
   subTitle: { fontSize: 16, color: "#4F4F4F", fontWeight: 600 },
+  label: {
+    display: { xs: "block", lg: "none" },
+    border: "0.5px solid #bde6d5",
+  },
 };
